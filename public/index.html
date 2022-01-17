@@ -48,8 +48,10 @@
 </body>
 <script>
   (function() {
-    if('serviceworker' in navigator) {
-      navigator.serviceworker.register("./service-worker.js")
+    console.log('here;')
+    if('serviceWorker' in navigator) {
+      console.log('there');
+      navigator.serviceWorker.register("./service-worker.js")
       .then(() => console.log('Service worker registered successfully'))
       .catch(err => console.log('service worker registration failed : ', error));
     }
